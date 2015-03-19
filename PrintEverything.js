@@ -1,4 +1,4 @@
-function printIt(input, options)
+function printThisThing(input, options)
 {
 	// Set Default options
 	var defaults =
@@ -64,7 +64,7 @@ function printIt(input, options)
 					ret = "[" + lb;
 					for(var i = 0; i < input.length; i++)
 					{
-						ret += indent + singleIndent + toStringGeneric(input[i], options);
+						ret += indent + singleIndent + printThisThing(input[i], options);
 						
 						if( i < input.length - 1)
 						{
@@ -91,7 +91,7 @@ function printIt(input, options)
 						for(var s = 0; s < namespaceLength - e.length; s++)
 							namespacePadding += " ";
 						
-						ret += indent + singleIndent + toStringGeneric(e, options) + namespacePadding + " : " + toStringGeneric(input[e], options) + ", " + lb;
+						ret += indent + singleIndent + printThisThing(e, options) + namespacePadding + " : " + printThisThing(input[e], options) + ", " + lb;
 					}
 					
 					if(ret == "")
