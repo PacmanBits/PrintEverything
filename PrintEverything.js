@@ -1,3 +1,47 @@
+/*
+////////////////////////////////////////////////////////////////
+//                                                            //
+//    PrintEverything             Sanford Robinson Gifford    //
+//                                                            //
+//       https://github.com/PacmanBits/PrintEverything        //
+//                                                            //
+////////////////////////////////////////////////////////////////
+
+Small Javascript function to help quickly transform any native object into
+a human-readable string.
+
+To use simply call function printThisThing with the desired object in the
+first argument. Additionally, an options object can be passed in the second
+argument; this object may contain the following values:
+ - indentLevel (int, default 0): The number of indents to set each line of
+   the print out in by at the lowest level.
+ - singleLine (bool, default false): If true, the entire object will be
+   printed to a single line without indents.
+ - matchPropertyLengths (bool, default true): If true, will find longest
+   property name in object and insert enough spaces after every other
+   property name to match the column for every colon (separating key and
+   value) in the object.
+ - singleIndent (string, default "\t"): The character (or characters) to
+   use for a single indent.
+
+
+    Copyright (C) 2015 Sanford Robinson Gifford
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
 function printThisThing(input, options)
 {
 	// Set Default options
